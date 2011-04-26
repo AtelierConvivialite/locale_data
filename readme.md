@@ -1,5 +1,23 @@
-`locale_data` is a collection of translated territories and languages names, stocked in YAML files for easy consumption.
+locale_data
+===========
 
-The data comes from [CLDR](http://cldr.unicode.org).
+A collection of country and language names, translated into hundreds of languages, and stored into YAML files for easy consumption.
 
-To update the YAML files, update the data in `data` and run the update scripts `./scripts/languages.rb` and `./scripts/territories.rb`.
+locale_data was extracted out from [Web Translate It](https://webtranslateit.com). The data comes from [CLDR](http://cldr.unicode.org).
+
+Update translations
+-------------------
+
+Whenever a new version of CLDR comes out, locale_data’s translations can be updated using the provided rake tasks:
+
+    $ rake -T
+    (in /Users/edouard/Projects/github/locale_data)
+    rake update_languages    # Update language translations
+    rake update_territories  # Update territory translations
+
+Run `rake update_languages` to update the language translations, and `rake update_territories` to update the territory translations.
+
+License
+-------
+
+Copyright (c) 2011 Atelier Convivialité, released under the MIT License.
