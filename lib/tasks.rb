@@ -2,7 +2,7 @@ require 'nokogiri'
 
 desc "Update language translations"
 task :update_languages do
-  Dir["data/cldr_1.9/common/main/**/*"].each do |data_file|
+  Dir["data/cldr_1.9.1/common/main/**/*"].each do |data_file|
     file_content = File.open(data_file) { |f| f.read.strip }
     language_code = data_file.split('/').last.split('.').first
     file = File.open("languages/#{language_code}.yml", 'w')
@@ -18,7 +18,7 @@ end
 
 desc "Update territory translations"
 task :update_territories do
-  Dir["data/cldr_1.9/common/main/**/*"].each do |data_file|
+  Dir["data/cldr_1.9.1/common/main/**/*"].each do |data_file|
     file_content = File.open(data_file) { |f| f.read.strip }
     language_code = data_file.split('/').last.split('.').first
     file = File.open("territories/#{language_code}.yml", 'w')
