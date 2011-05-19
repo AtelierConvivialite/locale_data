@@ -14,8 +14,7 @@ Whenever a new version of CLDR comes out, locale_data’s translations can be up
     (in /Users/edouard/Projects/github/locale_data)
     rake update_languages    # Update language translations
     rake update_territories  # Update territory translations
-
-Run `rake update_languages` to update the language translations, and `rake update_territories` to update the territory translations.
+    rake update_scripts      # Update script translations
 
 License
 -------
